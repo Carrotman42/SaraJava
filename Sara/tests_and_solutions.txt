@@ -1,0 +1,53 @@
+teach.solve_these.AverageOfThreeIntegers
+[I
+I
+[1,2,3]
+2
+[5,5,5]
+5
+[12,13,14]
+13
+[1,1,2]
+1
+[2,2,1]
+1
+done
+
+teach.solve_these.AbsoluteValue
+I
+I
+43
+43
+-43
+43
+0
+0
+100
+100
+-100
+100
+done
+
+teach.solve_these.ToUppercase
+String
+String
+hi there my name is kevin
+HI THERE MY NAME IS KEVIN
+Hello MY NAME is banana
+HELLO MY NAME IS BANANA
+GRAPEFRUIT IS BITTER
+GRAPEFRUIT IS BITTER
+done
+
+teach.solve_these.SumOfIntegerArray
+[I
+I
+[1,2,3,4]
+10
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+15
+[-2,-6,-2,2,6,2,-5,5]
+0
+[1,1,2,3,5,8]
+20
+done
