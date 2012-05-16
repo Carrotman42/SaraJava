@@ -5,6 +5,7 @@ import teach.testrig.testTypes.NoneToIntArrTest;
 public class GenerateFibonacci extends NoneToIntArrTest {
 
    public boolean testSolution() {
+       
       return true;
    }
 
