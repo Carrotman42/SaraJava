@@ -40,15 +40,32 @@ public class TestRig {
          ArrayList<Test> tests = new ArrayList<>();
          
          String l;
-         while (!(l = nextViableLine(raf)).equals("done")) {
+         while (!(l = nextImmediateLine(raf)).equals("done")) {
             tests.add(new Test(TypeHelper.scan(argtype, l),
-                  TypeHelper.scan(restype, nextViableLine(raf))));
+                  TypeHelper.scan(restype, nextImmediateLine(raf))));
          }
          
          ret.put(questionClassName, new TestCase(tests));
       }
       
       return ret;
+   }
+   
+   /**
+    * Same as nextViableLine(RandomAccessFile) but doesn't ignore empty lines.
+    * 
+    * @param r File to read
+    * @return The next line that isn't a comment
+    * @throws IOException
+    */
+   private static String nextImmediateLine(RandomAccessFile r) throws IOException {
+      String l;
+      
+      while ((l = r.readLine()) != null && l.startsWith("//")) {
+         //Reading file done in loop condition!
+      }
+      
+      return l;
    }
    
    private static String nextViableLine(RandomAccessFile r) throws IOException {
