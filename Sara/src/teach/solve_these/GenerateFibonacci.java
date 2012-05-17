@@ -14,6 +14,8 @@ public class GenerateFibonacci extends NoneToIntArrTest {
    int lastnum = 1;
    int nextnum = 0;
    int thisnum = 0;
+  // int[] answer = new int[10];
+   
    
    
        for (int i = 0; i < 10; i++){
@@ -21,7 +23,11 @@ public class GenerateFibonacci extends NoneToIntArrTest {
            lastnum = nextnum;
            nextnum = thisnum;
            System.out.println(thisnum);
-       
+          // answer[i] = thisnum; {
+       //    System.out.println(answer[i]);
+         //  return answer;
+           
+           }
        }
        
        
