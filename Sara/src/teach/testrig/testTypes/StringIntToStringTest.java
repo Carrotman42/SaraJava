@@ -11,6 +11,6 @@ public abstract class StringIntToStringTest extends SaraQuestion {
    @Override
    public Object test(Object arg) {
       Object[] args = (Object[])arg;
-      return test((String)args[0], (int)args[1]);
+      return test((String)args[0], Integer.parseInt((String)args[1]));
    }
 }
