@@ -73,3 +73,27 @@ I
 10
 [1,1,2,3,5,8,13,21,34,55]
 done
+
+teach.solve_these.WrapInParenthesis
+String
+String
+Turn this in blah
+(Turn this in blah)
+This is an awesome test
+(This is an awesome test)
+
+()
+done
+
+teach.solve_these.VariableWrapInParenthesis
+[String
+String
+[,0]
+
+[Yay!,3]
+(((Yay!)))
+[asdf,0]
+asdf
+[,2]
+(())
+done
