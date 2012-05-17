@@ -53,6 +53,21 @@ public class GenerateFibonacci extends NoneToIntArrTest {
        //   loop and then after the loop is finished (after the ending curly brace of the for loop) return
        //   array that you created.
        
+       // For example, this is how you would return an array of length 10 in which every 'element' of the
+       //   array contains the number 4:
+       
+       /*
+        * public static int[] makeArray() {
+        *     int[] retValue = new int[10];
+        * 
+        *     for (int i = 0; i < 10; i++) {
+        *         retValue[i] = 4;
+        *     }
+        * 
+        *     return retValue;
+        * }
+        */
+       
        return null;
    }
 }
