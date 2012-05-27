@@ -11,7 +11,10 @@ public class WrapInParenthesis extends StringToStringTest {
    public String test(String arg1) {
       // Return a string that is the provided String that is preceded by a left parenthesis
       //   and succeeded by a right parenthesis
-      return null;
+       
+       return (arg1);
+       
+     // return null;
    }
    
 }

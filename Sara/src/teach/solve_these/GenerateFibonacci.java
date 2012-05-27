@@ -13,7 +13,7 @@ public class GenerateFibonacci extends NoneToIntArrTest {
       int lastnum = 1;
       int nextnum = 0;
       int thisnum = 0;
-      // int[] answer = new int[10];
+      int[] answer = new int[10];
    
    
    
@@ -21,13 +21,11 @@ public class GenerateFibonacci extends NoneToIntArrTest {
            thisnum = lastnum + nextnum;
            lastnum = nextnum;
            nextnum = thisnum;
-           System.out.println(thisnum);
-          // answer[i] = thisnum; {
-       //    System.out.println(answer[i]);
-         //  return answer;
+           answer[i] = thisnum; 
            
-           //}
        }
+       
+       return answer;
        
        // You're very close! The thing to remember (I'm not sure if I even said this before) is
        //   that when a 'return' is executed, then the function is immediately stopped and control
@@ -68,6 +66,5 @@ public class GenerateFibonacci extends NoneToIntArrTest {
         * }
         */
        
-       return null;
    }
 }
