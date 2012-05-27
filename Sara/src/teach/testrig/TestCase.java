@@ -24,7 +24,7 @@ public class TestCase {
             passed++;
          }else if (verbose){
             System.out.println("\tTest failed!");
-            t.printInfo("\t\t", false);
+            t.printInfo("\t\t", true);
          }
       }
       
@@ -47,9 +47,9 @@ public class TestCase {
       
       void printInfo(String indent, boolean printAnswer) {
          System.out.println(indent + "Arguments: " + TypeHelper.toString(a));
-         System.out.println(indent + "Your answer: " + TypeHelper.toString(last));
+         System.out.println(indent +    "Your answer: " + TypeHelper.toString(last));
          if (printAnswer)
-            System.out.println(indent + "Expected : " + TypeHelper.toString(r));
+            System.out.println(indent + "Expected   : " + TypeHelper.toString(r));
       }
       
       Test(Object args, Object result){

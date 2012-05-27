@@ -1,5 +1,7 @@
 package teach.testrig.testTypes;
 
+import teach.testrig.TypeHelper;
+
 
 public abstract class NoneToIntArrTest extends SaraQuestion {
    
@@ -11,6 +13,6 @@ public abstract class NoneToIntArrTest extends SaraQuestion {
    @Override
    public Object test(Object args) {
       
-      return test();
+      return TypeHelper.convIntToInteger(test());
    }
 }

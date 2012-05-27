@@ -1,5 +1,7 @@
 package teach.testrig.testTypes;
 
+import teach.testrig.TypeHelper;
+
 
 public abstract class IntToIntArrTest extends SaraQuestion {
    
@@ -10,6 +12,6 @@ public abstract class IntToIntArrTest extends SaraQuestion {
    
    @Override
    public Object test(Object args) {
-      return test((int)args);
+      return TypeHelper.convIntToInteger((test((int)args)));
    }
 }

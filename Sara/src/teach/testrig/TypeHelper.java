@@ -15,6 +15,18 @@ public class TypeHelper {
       return ret;
    }
    
+   public static Integer[] convIntToInteger(int[] o) {
+      if (o == null) {
+         return null;
+      }
+      int len;
+      Integer[] ret = new Integer[len = o.length];
+      for (int i = 0; i < len; i++) {
+         ret[i] = o[i];
+      }
+      return ret;
+   }
+   
    public static String toString(Object o) {
       if (o instanceof Object[]) {
          Object[] arr = (Object[])o;
@@ -32,8 +44,32 @@ public class TypeHelper {
          return sb.append(toString(arr[len])).append("}").toString();
       }else if (o == null){
          return "null";
-      }else if (o.getClass().isArray() && o.getClass().getComponentType().isPrimitive()) {
-         return Array.
+      }else if (o.getClass().isArray()) {
+         if (o.getClass().getComponentType().isPrimitive()) {
+            switch (o.getClass().getComponentType().getName()) {
+               case "boolean":
+                  return Arrays.toString((boolean[])o);
+               case "byte":
+                  return Arrays.toString((byte[])o);
+               case "char":
+                  return Arrays.toString((char[])o);
+               case "double":
+                  return Arrays.toString((double[])o);
+               case "float":
+                  return Arrays.toString((float[])o);
+               case "int":
+                  return Arrays.toString((int[])o);
+               case "long":
+                  return Arrays.toString((long[])o);
+               case "short":
+                  return Arrays.toString((short[])o);
+               default:
+                  throw new RuntimeException("This is Kevin's fault! For some reason, the type of this object has been misinterpretted.");
+            }
+         }else{
+            return Arrays.toString((Object[])o);
+         }
+      }else {
          return o.toString();
       }
    }
