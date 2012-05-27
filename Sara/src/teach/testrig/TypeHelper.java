@@ -32,7 +32,8 @@ public class TypeHelper {
          return sb.append(toString(arr[len])).append("}").toString();
       }else if (o == null){
          return "null";
-      }else {
+      }else if (o.getClass().isArray() && o.getClass().getComponentType().isPrimitive()) {
+         return Array.
          return o.toString();
       }
    }
